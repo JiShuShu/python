@@ -1,0 +1,74 @@
+石博文  1311794174
+教学群  616720276
+
+*********************************************************************************
+git
+[root@room9pc01 NSD]# git config --global user.name JiShuShu             #指定用户名
+[root@room9pc01 NSD]# git config --global user.email ji@tedu.cn         #随意指定邮箱
+[root@room9pc01 NSD]# git config --global core.editor vim               #指定默认编辑器
+[root@room9pc01 NSD]# git config --list
+user.name=JiShuShu
+user.email=ji@tedu.cn
+core.editor=vim
+
+[root@room9pc01 ~]# cat ~/.gitconfig     #查看git配置信息
+[user]
+	name = JiShuShu
+	email = ji@tedu.cn
+[core]
+	editor = vim
+
+[root@room9pc01 NSD]# git init    或 git init NSD   #初始化git版本库
+
+[root@room9pc01 NSD]# echo "hello world" > 1.txt   
+[root@room9pc01 NSD]# git add .      或 git add 1.txt              #提交文件到暂存区
+[root@room9pc01 NSD]# git status                                  #查看状态
+# 位于分支 master
+#
+# 初始提交
+#
+# 要提交的变更：
+#   （使用 "git rm --cached <file>..." 撤出暂存区）
+#
+#	新文件：    1.txt
+#
+[root@room9pc01 NSD]# git status -s     
+A  1.txt                               #A:代表新增加的文件   D：本地删除文件  M：修改文件内容
+
+[root@room9pc01 NSD]# git commit -m "test"      #从暂存区提交到版本库
+[master（根提交） 526fa9c] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 1.txt
+
+[root@room9pc01 NSD]# echo "welcome to haha" >> 1.txt 
+[root@room9pc01 NSD]# git commit -am "modify"           #先添加再提交
+[master ade94dd] modify
+ 1 file changed, 1 insertion(+)
+
+[root@room9pc01 NSD]# git ls-files              #查看版本库中的文件
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
